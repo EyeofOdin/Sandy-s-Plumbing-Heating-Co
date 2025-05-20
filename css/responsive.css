@@ -1,0 +1,204 @@
+/* 
+=======================
+Sandy's Plumbing & Heating Co - Responsive Styles
+=======================
+*/
+
+/* === Tablet Styles (768px - 1023px) === */
+@media screen and (max-width: 1023px) {
+    /* Typography */
+    h1 {
+        font-size: 2.25rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    /* Header */
+    .top-bar .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    /* Hero */
+    #hero {
+        height: 500px;
+        margin-top: 140px; /* Adjust for taller header */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Service Cards */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* About Section */
+    .about-flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    /* Why Choose Us */
+    #why-choose .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-about {
+        grid-column: span 2;
+    }
+}
+
+/* === Mobile Styles (up to 767px) === */
+@media screen and (max-width: 767px) {
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    /* Header & Navigation */
+    .top-bar {
+        display: none; /* Hide top bar on mobile */
+    }
+    
+    #hero {
+        margin-top: 80px; /* Adjust for shorter header */
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        transition: left 0.3s ease;
+        box-shadow: var(--shadow-md);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+    
+    /* Hero */
+    #hero {
+        height: auto;
+        padding: 4rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Features */
+    .features-grid,
+    #why-choose .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-about {
+        grid-column: span 1;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+/* === Mobile Landscape Orientation === */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    #hero {
+        height: auto;
+        padding: 3rem 0;
+    }
+    
+    .nav-menu {
+        overflow-y: auto;
+    }
+}
+
+/* === Large Screens (1200px and up) === */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+    
+    /* Increase spacing for better readability on large screens */
+    section {
+        padding: 5rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
